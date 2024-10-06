@@ -15,7 +15,10 @@ const AuthRegister = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  function onSubmit() {}
+  function onSubmit(e) {
+    e.preventDefault();
+    console.log(formData);
+  }
 
   return (
     <div className="mx-auto w-full max-w-md space-y-6">
