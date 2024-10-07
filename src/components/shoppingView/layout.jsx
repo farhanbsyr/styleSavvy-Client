@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import ShoppingHeader from "./shoppingHeader";
+import ShoppingHeader from "./ShoppingHeader";
 import CheckAuth from "../common/CheckAuth";
 
 function ShoppingLayout() {
