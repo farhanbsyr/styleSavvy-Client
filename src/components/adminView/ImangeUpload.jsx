@@ -106,7 +106,7 @@ function ProductImageUpload({
             <Button
               variant="ghost"
               size="icon"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground p-0"
               onClick={handleRemoveImage}
             >
               <XIcon className="w-4 h-4" />

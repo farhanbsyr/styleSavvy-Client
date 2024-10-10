@@ -4,7 +4,7 @@ import adminOrderSlice from "./admin/orderSlice";
 import authReducer from "./authSlice";
 import commonFeatureSlice from "./commonSlice";
 import shopCartSlice from "./shop/cartSlice";
-import shopReviewSlice from "./shop/reviewSlice";
+import shopReviewSlice from "./reviewSlice";
 import shopProductsSlice from "./shop/productSlice";
 const store = configureStore({
   reducer: {

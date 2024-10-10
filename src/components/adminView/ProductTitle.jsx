@@ -33,17 +33,24 @@ function AdminProductTile({
             ) : null}
           </div>
         </CardContent>
-        <CardFooter className="flex justify-between items-center">
+        <CardFooter className="flex gap-2 justify-between items-center">
           <Button
+            className="w-full"
             onClick={() => {
               setOpenCreateProductsDialog(true);
               setCurrentEditedId(product?._id);
               setFormData(product);
+              console.log(product);
             }}
           >
             Edit
           </Button>
-          <Button onClick={() => handleDelete(product?._id)}>Delete</Button>
+          <Button
+            className="bg-red-500 hover:bg-red-600 hover:outline-none hover:border-none hover:shadow-none text-white w-full"
+            onClick={() => handleDelete(product?._id)}
+          >
+            Delete
+          </Button>
         </CardFooter>
       </div>
     </Card>

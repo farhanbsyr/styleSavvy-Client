@@ -17,7 +17,7 @@ export const addNewProduct = createAsyncThunk(
           "Content-Type": "application/json",
         },
       }
-    );
+    );``
 
     return result?.data;
   }
