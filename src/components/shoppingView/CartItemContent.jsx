@@ -14,12 +14,11 @@ function UserCartItemsContent({ cartItem }) {
   function handleUpdateQuantity(getCartItem, typeOfAction) {
     if (typeOfAction == "plus") {
       let getCartItems = cartItems.items || [];
-
+      console.log(cartItem, "item cartitem");
       if (getCartItems.length) {
         const indexOfCurrentCartItem = getCartItems.findIndex(
           (item) => item.productId === getCartItem?.productId
         );
-
         const getCurrentProductIndex = productList.findIndex(
           (product) => product._id === getCartItem?.productId
         );
@@ -83,7 +82,7 @@ function UserCartItemsContent({ cartItem }) {
         <div className="flex items-center gap-2 mt-1">
           <Button
             variant="outline"
-            className="h-8 w-8 rounded-full"
+            className="h-8 w-8 rounded-full p-0"
             size="icon"
             disabled={cartItem?.quantity === 1}
             onClick={() => handleUpdateQuantity(cartItem, "minus")}
@@ -94,7 +93,7 @@ function UserCartItemsContent({ cartItem }) {
           <span className="font-semibold">{cartItem?.quantity}</span>
           <Button
             variant="outline"
-            className="h-8 w-8 rounded-full"
+            className="h-8 w-8 rounded-full p-0"
             size="icon"
             onClick={() => handleUpdateQuantity(cartItem, "plus")}
           >

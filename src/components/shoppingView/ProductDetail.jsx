@@ -132,7 +132,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
               ${productDetails?.price}
             </p>
             {productDetails?.salePrice > 0 ? (
-              <p className="text-2xl font-bold text-muted-foreground">
+              <p className="text-2xl font-bold text-blue-400  text-muted-foreground">
                 ${productDetails?.salePrice}
               </p>
             ) : null}

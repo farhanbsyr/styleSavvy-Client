@@ -76,7 +76,7 @@ function ShoppingListing() {
     }
 
     setFilters(cpyFilters);
-    // sessionStorage.setItem("filters", JSON.stringify(cpyFilters));
+    sessionStorage.setItem("filters", JSON.stringify(cpyFilters));
   }
 
   function handleGetProductDetails(getCurrentProductId) {
@@ -85,7 +85,7 @@ function ShoppingListing() {
   }
 
   function handleAddtoCart(getCurrentProductId, getTotalStock) {
-    console.log(cartItems);
+    console.log(cartItems, "test cart items");
     let getCartItems = cartItems.items || [];
 
     if (getCartItems.length) {
@@ -123,7 +123,7 @@ function ShoppingListing() {
 
   useEffect(() => {
     setSort("price-lowtohigh");
-    // setFilters(JSON.parse(sessionStorage.getItem("filters")) || {});
+    setFilters(JSON.parse(sessionStorage.getItem("filters")) || {});
   }, [categorySearchParam]);
 
   useEffect(() => {
