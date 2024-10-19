@@ -15,6 +15,7 @@ import { Skeleton } from "./components/ui/skeleton";
 import { useEffect } from "react";
 import { checkAuth } from "./store/authSlice/index.mjs";
 import ListProduct from "./pages/shoppingView/ListProduct";
+import ShoppingAccount from "./pages/shoppingView/Account";
 
 function App() {
   const { user, isAuthenticated, isLoading } = useSelector(
@@ -73,6 +74,7 @@ function App() {
         >
           <Route path="home" element={<ShoppingHome />} />
           <Route path="products" element={<ListProduct />} />
+          <Route path="account" element={<ShoppingAccount />} />
         </Route>
         <Route path="*" element={<NotFound />} />
 

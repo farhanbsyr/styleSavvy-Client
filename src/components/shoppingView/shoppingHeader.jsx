@@ -143,7 +143,7 @@ function ShoppingHeader() {
         </Link>
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="lg:hidden">
+            <Button variant="outline" size="icon" className="lg:hidden p-0">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle header menu</span>
             </Button>
