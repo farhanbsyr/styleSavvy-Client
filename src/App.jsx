@@ -17,6 +17,8 @@ import { checkAuth } from "./store/authSlice/index.mjs";
 import ListProduct from "./pages/shoppingView/ListProduct";
 import ShoppingAccount from "./pages/shoppingView/Account";
 import ShoppingCheckout from "./pages/shoppingView/Checkout";
+import PaypalReturnPage from "./pages/shoppingView/PaymentReturn";
+import PaymentSuccessPage from "./pages/shoppingView/PaymentSuccess";
 
 function App() {
   const { user, isAuthenticated, isLoading } = useSelector(
@@ -77,6 +79,8 @@ function App() {
           <Route path="products" element={<ListProduct />} />
           <Route path="account" element={<ShoppingAccount />} />
           <Route path="checkout" element={<ShoppingCheckout />} />
+          <Route path="paypal-return" element={<PaypalReturnPage />} />
+          <Route path="payment-success" element={<PaymentSuccessPage />} />
         </Route>
         <Route path="*" element={<NotFound />} />
 
