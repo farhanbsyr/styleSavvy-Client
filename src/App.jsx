@@ -16,6 +16,7 @@ import { useEffect } from "react";
 import { checkAuth } from "./store/authSlice/index.mjs";
 import ListProduct from "./pages/shoppingView/ListProduct";
 import ShoppingAccount from "./pages/shoppingView/Account";
+import ShoppingCheckout from "./pages/shoppingView/Checkout";
 
 function App() {
   const { user, isAuthenticated, isLoading } = useSelector(
@@ -75,6 +76,7 @@ function App() {
           <Route path="home" element={<ShoppingHome />} />
           <Route path="products" element={<ListProduct />} />
           <Route path="account" element={<ShoppingAccount />} />
+          <Route path="checkout" element={<ShoppingCheckout />} />
         </Route>
         <Route path="*" element={<NotFound />} />
 
