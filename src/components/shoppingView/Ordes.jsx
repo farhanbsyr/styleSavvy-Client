@@ -24,8 +24,9 @@ function ShoppingOrders() {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   const { orderList, orderDetails } = useSelector((state) => state.shopOrder);
-
+  console.log(orderList);
   function handleFetchOrderDetails(getId) {
+    console.log(getId, "getid");
     dispatch(getOrderDetails(getId));
   }
 
@@ -60,7 +61,7 @@ function ShoppingOrders() {
           <TableBody>
             {orderList && orderList.length > 0
               ? orderList.map((orderItem) => (
-                  <TableRow>
+                  <TableRow key={orderItem._id}>
                     <TableCell>{orderItem?._id}</TableCell>
                     <TableCell>{orderItem?.orderDate.split("T")[0]}</TableCell>
                     <TableCell>
