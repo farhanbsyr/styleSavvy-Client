@@ -6,7 +6,7 @@ import AdminLayout from "./components/adminView/Layout";
 import AdminDashboard from "./pages/adminView/Dashboard";
 import AdminProduct from "./pages/adminView/Product";
 import AdminOrders from "./pages/adminView/Orders";
-import ShoppingLayout from "./components/shoppingView/Layout";
+import ShoppingLayout from "./components/shoppingView/layout";
 import NotFound from "./pages/NotFound";
 import { useDispatch, useSelector } from "react-redux";
 import CheckAuth from "./components/common/CheckAuth";
